@@ -18,7 +18,7 @@ class DeskController extends Controller
 {
     /**
      * @OA\Get(
-     *     path="/api/desks",
+     *     path="/api/desk",
      *     tags={"desk"},
      *     summary="Display a listing of items",
      *     operationId="index",
@@ -45,10 +45,15 @@ class DeskController extends Controller
      *         description="Request body description",
      *         @OA\JsonContent(
      *             ref="#/components/schemas/Desk",
-     *             example={"title": "Eating Clean", "author": "Inge Tumiwa-Bachrens", "publisher": "Kawan Pustaka", "publication_year": "2016",
-     *                      "cover": "https://images-na.ssl-images-amazon.com/images/I/1482170655/33511107.jpg",
-     *                      "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu 'sehat' bagi tubuh kita.",
-     *                      "price": 80000}
+     *             example={
+     *                 "title": "Eating Clean",
+     *                 "author": "Inge Tumiwa-Bachrens",
+     *                 "publisher": "Kawan Pustaka",
+     *                 "publication_year": "2016",
+     *                 "cover": "https://images-na.ssl-images-amazon.com/images/I/1482170655/33511107.jpg",
+     *                 "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu 'sehat' bagi tubuh kita.",
+     *                 "price": 80000
+     *             }
      *         )
      *     ),
      *     @OA\Response(
@@ -60,7 +65,8 @@ class DeskController extends Controller
      *         response=201,
      *         description="Successful",
      *         @OA\JsonContent()
-     *     )
+     *     ),
+     *     security={{"passport_token_ready":{},"passport":{}}}
      * )
      */
     public function store(Request $request)
@@ -83,7 +89,7 @@ class DeskController extends Controller
 
     /**
      * @OA\Get(
-     *     path="/api/desks/{id}",
+     *     path="/api/desk/{id}",
      *     tags={"desk"},
      *     summary="Display the specified item",
      *     operationId="show",
@@ -111,7 +117,8 @@ class DeskController extends Controller
      *         response=200,
      *         description="Successful",
      *         @OA\JsonContent()
-     *     )
+     *     ),
+     *     security={{"passport_token_ready":{},"passport":{}}}  
      * )
      */
     public function show($id)
@@ -125,7 +132,7 @@ class DeskController extends Controller
 
     /**
      * @OA\Put(
-     *     path="/api/deksks/{id}",
+     *     path="/api/desk/{id}",
      *     tags={"desk"},
      *     summary="Update the specified item",
      *     operationId="update",
@@ -144,10 +151,15 @@ class DeskController extends Controller
      *         description="Request body description",
      *         @OA\JsonContent(
      *             ref="#/components/schemas/Desk",
-     *             example={"title": "Eating Clean", "author": "Inge Tumiwa-Bachrens", "publisher": "Kawan Pustaka", "publication_year": "2016",
-     *                      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482170605i/33511107.jpg",
-     *                      "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu ‘sehat’ bagi tubuh kita.",
-     *                      "price": 85000}
+     *             example={
+     *                 "title": "Eating Clean",
+     *                 "author": "Inge Tumiwa-Bachrens",
+     *                 "publisher": "Kawan Pustaka",
+     *                 "publication_year": "2016",
+     *                 "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482170605i/33511107.jpg",
+     *                 "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu ‘sehat’ bagi tubuh kita.",
+     *                 "price": 85000
+     *             }
      *         )
      *     ),
      *     @OA\Response(
@@ -164,7 +176,8 @@ class DeskController extends Controller
      *         response=200,
      *         description="Successful",
      *         @OA\JsonContent()
-     *     )
+     *     ),
+     *     security={{"passport_token_ready":{},"passport":{}}}
      * )
      */
     public function update(Request $request, $id)
@@ -176,7 +189,7 @@ class DeskController extends Controller
 
         try {
             $validator = Validator::make($request->all(), [
-                'title' => 'required|unique:desks',
+                'title' => 'required|unique:desks,title,'.$id,
                 'author' => 'required|max:100',
             ]);
             if ($validator->fails()) {
@@ -191,7 +204,7 @@ class DeskController extends Controller
 
     /**
      * @OA\Delete(
-     *     path="/api/desks/{id}",
+     *     path="/api/desk/{id}",
      *     tags={"desk"},
      *     summary="Remove the specified item",
      *     operationId="destroy",
@@ -219,7 +232,8 @@ class DeskController extends Controller
      *         response=200,
      *         description="Successful",
      *         @OA\JsonContent()
-     *     )
+     *     ),
+     *     security={{"passport_token_ready":{},"passport":{}}}
      * )
      */
     public function destroy($id)
