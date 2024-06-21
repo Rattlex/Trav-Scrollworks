@@ -29,10 +29,10 @@
                                     <a href="{{route('plp')}}"><span>Scrollworks</span></a>
                                 </li>
                                 <li>
-                                    <a href=<span>Contact</span></a>
+                                    <a href="{{route('contact')}}"><span>Discord</span></a>
                                 </li>
                                 <li>
-                                    <a href=<span>About Us</span></a>
+                                    <a href="{{route('about')}}"><span>About Us</span></a>
                                 </li>
                             </ul>
                         </nav>

@@ -13,8 +13,8 @@ function getDataByWindowUrlKey(){
       $('#product-name').html(response.data.title);
       $('#product-price').html('IDR '+parseFloat(response.data.price).toLocaleString());
       $('#product-description').html(response.data.description);
-      $('#product-author').html(response.data.author);
-      $('#product-publisher').html('First published '+response.data.publication_year+' by '+response.data.publisher);
+      $('#product-design').html(response.data.design);
+      $('#product-style').html('First published '+response.data.publication_year+' by '+response.data.style);
 
       // START -- note, unless you have these data in a database structure, here we are hardcoding them for display purposes
         // review
@@ -34,7 +34,7 @@ function getDataByWindowUrlKey(){
           $('.product-add-to-cart-is-disabled').show();
         }
         // tag
-        let collectionOfTag = ['Desk','EDesk','Best Seller','Fiction','Education','Literature','Classics','Real Event','Young Adult','Religion','Health','Comic','Horror','Poem','Filmed','Encyclopedia','In English','In Indonesian'];
+        let collectionOfTag = ['Desk','Tenjin','Scrollworks','Mousepad','Deskmat','Byakko','Kisetsu','Raiju','Kikko','Asanoha','Kamon','Tengaiha','Kunai','Kansha','Raijin','Faith','Iso','Sapphire'];
         let selectedTags    = collectionOfTag.sort(() => .5 - Math.random()).slice(0, 4); // only get 4, randomly, from collectionOfTag
         template = '';
         for (let index = 0; index < selectedTags.length; index++) {

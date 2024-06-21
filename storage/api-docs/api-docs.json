@@ -172,9 +172,9 @@
                         }
                     },
                     {
-                        "name": "_publisher",
+                        "name": "_style",
                         "in": "query",
-                        "description": "search by publisher like name",
+                        "description": "search by style like name",
                         "required": false,
                         "schema": {
                             "type": "string"
@@ -218,8 +218,8 @@
                             },
                             "example": {
                                 "title": "Eating Clean",
-                                "author": "Inge Tumiwa-Bachrens",
-                                "publisher": "Kawan Pustaka",
+                                "design": "Inge Tumiwa-Bachrens",
+                                "style": "Kawan Pustaka",
                                 "publication_year": "2016",
                                 "cover": "https://images-na.ssl-images-amazon.com/images/I/1482170655/33511107.jpg",
                                 "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu 'sehat' bagi tubuh kita.",
@@ -334,8 +334,8 @@
                             },
                             "example": {
                                 "title": "Eating Clean",
-                                "author": "Inge Tumiwa-Bachrens",
-                                "publisher": "Kawan Pustaka",
+                                "design": "Inge Tumiwa-Bachrens",
+                                "style": "Kawan Pustaka",
                                 "publication_year": "2016",
                                 "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482170605i/33511107.jpg",
                                 "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu ‘sehat’ bagi tubuh kita.",

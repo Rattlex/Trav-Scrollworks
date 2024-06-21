@@ -30,8 +30,8 @@ class Desk extends Model
     protected $table = 'desks';
     protected $fillable = [
         'title',
-        'author',
-        'publisher',
+        'design',
+        'style',
         'publication_year',
         'cover',
         'description',

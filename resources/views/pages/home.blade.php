@@ -20,17 +20,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="about-us-content_6 text-center">
-                            <h2>W.T.T.W.&nbsp;&nbsp;Store</h2>
+                            <h2>TENJIN&nbsp;&nbsp;Scrollworks</h2>
                             <p>
                                 <small>
-                                Whether you're searching for the latest bestsellers, timeless classics, or hidden gems, 
-                                our carefully curated collection has something for everyone. Our passionate staff is dedicated 
-                                to helping you find the perfect read, and our cozy, welcoming environment invites you to linger 
-                                and explore. Join our community of book lovers and let us help you. 
-                                Visit us today and experience the joy of getting lost in a great book &#10084;
+                                Tenjin is a Japanese-inspired brand specializing in deskmat artistry. Founded in 2021 as a collaborative prowess between its founders, 
+                                our brand is divided into two sub-brands: Scrollworks — specializing in deskmat lines, and Style — offering merchandise derivatives. &#10084;
                                 </small>
                             </p>
-                            <p class="mt-5">Find your window to the world! Or, even, <span class="text-color-primary">unlock hidden worlds, one page at a time!</span> 
+                            <p class="mt-5">Japanese-inspired lifestyle brand born from collaborative prowess and flaring aspirations. <span class="text-color-primary">We aim to bring selections of finely crafted goods to aid your day-to-day performances.s</span> 
                             </p>
                         </div>
                     </div>
@@ -44,9 +41,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="banner-video-box">
-                            <img src="https://www.magd.ox.ac.uk/wp-content/uploads/2022/07/3027-052-2000x1000.jpg" alt="">
+                            <img src="https://www.tenjin.style/cdn/shop/files/Thumbnail_Web.jpg?v=1675848100&width=1780" alt="">
                             <div class="video-icon">
-                                <a href="https://youtu.be/Na5KPnx0uS8?si=PPoJfum8xG-Jt8h9" class="popup-youtube"><i class="linear-ic-play"></i></a>
+                                <a href="https://www.youtube.com/watch?v=-fRVxw_Gxdo" class="popup-youtube"><i class="linear-ic-play"></i></a>
                             </div>
                         </div>
                     </div>

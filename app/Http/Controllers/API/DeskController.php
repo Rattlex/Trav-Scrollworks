@@ -12,7 +12,7 @@ use OpenApi\Annotations as OA;
 /**
  * Class DeskController.
  *
- * @author  Jonathan
+ * @author  jonathan <jonathan@ukrida.ac.id>
  */
 class DeskController extends Controller
 {
@@ -59,9 +59,9 @@ class DeskController extends Controller
      *         )
      *     ),
      *     @OA\Parameter(
-     *         name="_publisher",
+     *         name="_style",
      *         in="query",
-     *         description="search by publisher like name",
+     *         description="search by style like name",
      *         required=false,
      *         @OA\Schema(
      *             type="string",
@@ -89,10 +89,10 @@ class DeskController extends Controller
             $data['products']     = Desk::whereRaw('1 = 1');
             
             if($request->get('_search')){
-                $data['products'] = $data['products']->whereRaw('(LOWER(title) LIKE "%'.strtolower($request->get('_search')).'%" OR LOWER(author) LIKE "%'.strtolower($request->get('_search')).'%")');
+                $data['products'] = $data['products']->whereRaw('(LOWER(title) LIKE "%'.strtolower($request->get('_search')).'%" OR LOWER(design) LIKE "%'.strtolower($request->get('_search')).'%")');
             }
-            if($request->get('_publisher')){
-                $data['products'] = $data['products']->whereRaw('LOWER(publisher) = "'.strtolower($request->get('_publisher')).'"');
+            if($request->get('_style')){
+                $data['products'] = $data['products']->whereRaw('LOWER(style) = "'.strtolower($request->get('_style')).'"');
             }
             if($request->get('_sort_by')){
             switch ($request->get('_sort_by')) {
@@ -143,8 +143,8 @@ class DeskController extends Controller
      *             ref="#/components/schemas/Desk",
      *             example={
      *                 "title": "Eating Clean",
-     *                 "author": "Inge Tumiwa-Bachrens",
-     *                 "publisher": "Kawan Pustaka",
+     *                 "design": "Inge Tumiwa-Bachrens",
+     *                 "style": "Kawan Pustaka",
      *                 "publication_year": "2016",
      *                 "cover": "https://images-na.ssl-images-amazon.com/images/I/1482170655/33511107.jpg",
      *                 "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu 'sehat' bagi tubuh kita.",
@@ -170,7 +170,7 @@ class DeskController extends Controller
         try {
             $validator = Validator::make($request->all(), [
                 'title'  => 'required|unique:desks',
-                'author' => 'required|max:100',
+                'design' => 'required|max:100',
             ]);
             if ($validator->fails()) {
                 throw new HttpException(400, $validator->messages()->first());
@@ -249,8 +249,8 @@ class DeskController extends Controller
      *             ref="#/components/schemas/Desk",
      *             example={
      *                 "title": "Eating Clean",
-     *                 "author": "Inge Tumiwa-Bachrens",
-     *                 "publisher": "Kawan Pustaka",
+     *                 "design": "Inge Tumiwa-Bachrens",
+     *                 "style": "Kawan Pustaka",
      *                 "publication_year": "2016",
      *                 "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482170605i/33511107.jpg",
      *                 "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu ‘sehat’ bagi tubuh kita.",
@@ -286,7 +286,7 @@ class DeskController extends Controller
         try {
             $validator = Validator::make($request->all(), [
                 'title' => 'required|unique:desks,title,'.$id,
-                'author' => 'required|max:100',
+                'design' => 'required|max:100',
             ]);
             if ($validator->fails()) {
                 throw new HttpException(400, $validator->messages()->first());

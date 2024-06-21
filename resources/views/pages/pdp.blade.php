@@ -94,12 +94,12 @@
 
                         <div class="product_meta mt-30">
                             <div class="posted_in item_meta">
-                                <span class="label">Author: </span>
-                                <span id="product-author" class="text-color-primary"></span>
+                                <span class="label">Design: </span>
+                                <span id="product-design" class="text-color-primary"></span>
                             </div>
                             <div class="posted_in item_meta">
-                                <span class="label">Publisher: </span>
-                                <span id="product-publisher"></span>
+                                <span class="label">Style: </span>
+                                <span id="product-style"></span>
                             </div>
                             <div class="tagged_as item_meta">
                                 <span class="label">Tag: </span>

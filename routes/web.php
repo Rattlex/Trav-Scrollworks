@@ -15,6 +15,12 @@ Route::get('/desk/{i}', function () {
 Route::get('/login', function () {
     return view('pages.login');
 })->name('show_login');
+Route::get('/about', function () {
+    return view('pages.about');
+})->name('about');  
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
 
 
 Route::middleware('auth')->prefix('admin')->group(function () {
