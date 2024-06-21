@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\DeskController;
 
-Route::prefix('user')->group(function() {
-    Route::get('/user', function () {
+Route::prefix('user')->group(function () {
+    Route::get('/users', function () {
         return $request->user();
     });
     Route::post('/register', [AuthController::class, 'register']);
@@ -15,14 +15,14 @@ Route::prefix('user')->group(function() {
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:api');
 });
 
-Route::Resource('desk', DeskController::class, [
+Route::resource('desk', DeskController::class, [
     'only' => [
         'index',
         'show'
     ]
 ]);
 
-Route::Resource('desk', DeskController::class, [
+Route::resource('desk', DeskController::class, [
     'except' => [
         'index',
         'show'
