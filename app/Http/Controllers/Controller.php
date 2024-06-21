@@ -22,4 +22,5 @@ use OpenApi\Annotations as OA;
 
 abstract class Controller
 {
+    
 }

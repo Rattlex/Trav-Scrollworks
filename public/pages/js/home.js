@@ -1,7 +1,7 @@
 let id_el_list = "#product-preview";
 
 function getData(){
-    let url = baseUrl+'/api/book';
+    let url = baseUrl+'/api/desk';
     let payload = {
         '_limit': 3,
         '_page': 1,
@@ -14,7 +14,7 @@ function getData(){
         let template = ``;
         (response.data.products).forEach((item) => {
             template += `
-            <div class="single-hero-slider-7" onclick="location.href='`+baseUrl+`/book/`+item.id+`'">
+            <div class="single-hero-slider-7" onclick="location.href='`+baseUrl+`/desk/`+item.id+`'">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">

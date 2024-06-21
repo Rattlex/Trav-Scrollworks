@@ -5,10 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="description" content="Find your window to the world!">
-        <meta name="keywords" content="ecommerce,book">
+        <meta name="keywords" content="ecommerce,desk">
         <meta name="author" content="NIM-NAME">
 
-        <title>@yield('title') | NIM-NAME</title>
+        <title>@yield('title') | 422021011-Jonathan Ferdinand</title>
         <link rel="icon" type="image/x-icon" href="{{asset('assets/images/favicon.ico')}}">
         <!-- BEGIN: CSS Assets-->
         <link rel="stylesheet" type="text/css" href="{{asset('assets/css/vendor/bootstrap.min.css')}}">
