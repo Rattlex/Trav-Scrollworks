@@ -3,22 +3,14 @@
     <!-- Header Bottom Wrap Start -->
     <header class="header-area   header-sticky">
         <div class="container-fluid container-fluid--cp-100">
-            <div class="row">
-                <div class="col-lg-12 d-none d-md-block">
-                    <div class="top-logo-area">
-                        <div class="logo text-md-center">
-                            <a href="{{route('home')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt="logo" style="width:40%"></a>
-                        </div>
-                    </div>
+            <div class="row align-items-center">
                 </div>
             </div>
             <div class="row align-items-center">
 
                 <div class="col-lg-3 col-lg-3 col-6">
                     <div class="header-right-items content__hidden d-none d-md-block">
-                        <span class="phone-number font-lg-p" title="Call us for fast delivery">
-                            <a href="#cfd"><i class="icon-telephone"></i>&nbsp;&nbsp;<small class="text-color-primary"><b>+(62) 85212345678</b></small></a>
-                        </span>
+                        <a href="{{route('home')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt="logo" style="width:40%"></a>
                     </div>
                     <div class="logo__hidden text-start">
                         <a href="{{route('home')}}"><img src="{{asset('assets/images/logo/logo.png')}}" alt="" style="height:40px"></a>
@@ -31,10 +23,16 @@
                         <nav class="navigation-menu">
                             <ul class="justify-content-center">
                                 <li>
-                                    <a href="{{route('home')}}"><span>Home</span></a>
+                                    <a href="{{route('home')}}"><span>All Products</span></a>
                                 </li>
                                 <li>
-                                    <a href="{{route('plp')}}"><span>Shop</span></a>
+                                    <a href="{{route('plp')}}"><span>Scrollworks</span></a>
+                                </li>
+                                <li>
+                                    <a href=<span>Contact</span></a>
+                                </li>
+                                <li>
+                                    <a href=<span>About Us</span></a>
                                 </li>
                             </ul>
                         </nav>
