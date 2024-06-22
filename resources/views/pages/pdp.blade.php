@@ -13,9 +13,9 @@
                         <div class="product-details-images-2 slider-lg-image-2">
 
                             <div class="easyzoom-style">
-                                <div class="easyzoom easyzoom--overlay">
-                                    <a href="{{asset('assets/images/product/single-product-01.webp')}}" class="poppu-img product-img-main-href">
-                                        <img src="{{asset('assets/images/product/single-product-01.webp')}}" class="img-fluid product-img-main-src" alt="">
+                                <div class="easyzoom easyzoom--overlay" style="width: 100%">
+                                    <a href="{{asset('assets/images/product/single-product-01.webp')}}" class="poppu-img product-img-main-href" style="width: 100%">
+                                        <img src="{{asset('assets/images/product/single-product-01.webp')}}" class="img-fluid product-img-main-src" style="width: 100%" alt="">
                                     </a>
                                 </div>
                             </div>
@@ -41,12 +41,6 @@
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="product-details-thumbs-2 slider-thumbs-2">
-                            <div class="sm-image"><img src="{{asset('assets/images/product/small/1-100x100.webp')}}" alt="product image thumb" class="product-img-main-src"></div>
-                            <div class="sm-image"><img src="{{asset('assets/images/product/small/2-100x100.webp')}}" alt="product image thumb"></div>
-                            <div class="sm-image"><img src="{{asset('assets/images/product/small/3-100x100.webp')}}" alt="product image thumb"></div>
-                            <div class="sm-image"><img src="{{asset('assets/images/product/small/4-100x100.webp')}}" alt="product image thumb"></div>
                         </div>
                     </div>
                     <!--// Product Details Left -->

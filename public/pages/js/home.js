@@ -18,10 +18,10 @@ function getData(){
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
-                            <div class="hero-content-wrap">
+                            <div class="hero-content-wrap"> 
                                 <div class="hero-text-7 mt-lg-5">
                                     <h6 class="mb-20">
-                                        Latest from WTTW
+                                        Get your gears ready, join the forces.
                                     </h6>
                                     <h1>`+breakWord(item.title)+`</h1>
 
